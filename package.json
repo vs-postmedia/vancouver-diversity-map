@@ -4,8 +4,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "d3-array": "^2.2.0",
+    "d3-request": "^1.0.6",
+    "d3-scale": "^3.0.1",
+    "immutable": "^4.0.0-rc.12",
+    "leaflet": "^1.5.1",
+    "mapbox-gl-leaflet": "0.0.8",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-leaflet": "^2.4.0",
+    "react-map-gl": "^5.0.8",
     "react-scripts": "3.0.1"
   },
   "scripts": {
