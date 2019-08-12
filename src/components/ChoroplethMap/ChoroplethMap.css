@@ -1,0 +1,31 @@
+body {
+	padding: 0 !important;
+}
+
+#map {
+	height: 500px;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100vw;
+}
+
+#map > div {
+	height: 500px;
+}
+
+#map .mapboxgl-ctrl {
+	transform: translate(10px, 20px);
+	width: 30px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  margin-left: 20px;
+  width: 160px;
+}
+

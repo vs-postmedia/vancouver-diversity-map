@@ -1,0 +1,22 @@
+.legend {
+	margin: 20px 0;
+}
+.legend h4 {
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+.legend .color-bar {
+	display: flex
+}
+
+.legend .swatch {
+	opacity: 0.7;
+}
+.legend .legend-label {
+	font-size: 0.8rem; 
+	transform: translateX(-5px);
+}
+
+.legend .swatch:last-of-type .legend-label {
+	display: none;
+}
