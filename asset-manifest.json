@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/vancouver-diversity-map/static/css/main.bcc8181c.chunk.css",
+    "main.js": "/vancouver-diversity-map/static/js/main.d41cb89c.chunk.js",
+    "main.js.map": "/vancouver-diversity-map/static/js/main.d41cb89c.chunk.js.map",
+    "runtime~main.js": "/vancouver-diversity-map/static/js/runtime~main.be07d675.js",
+    "runtime~main.js.map": "/vancouver-diversity-map/static/js/runtime~main.be07d675.js.map",
+    "static/css/2.6639d161.chunk.css": "/vancouver-diversity-map/static/css/2.6639d161.chunk.css",
+    "static/js/2.e5c95d7d.chunk.js": "/vancouver-diversity-map/static/js/2.e5c95d7d.chunk.js",
+    "static/js/2.e5c95d7d.chunk.js.map": "/vancouver-diversity-map/static/js/2.e5c95d7d.chunk.js.map",
+    "index.html": "/vancouver-diversity-map/index.html",
+    "precache-manifest.0046e27141c5c23af0049c38a3b6f878.js": "/vancouver-diversity-map/precache-manifest.0046e27141c5c23af0049c38a3b6f878.js",
+    "service-worker.js": "/vancouver-diversity-map/service-worker.js",
+    "static/css/2.6639d161.chunk.css.map": "/vancouver-diversity-map/static/css/2.6639d161.chunk.css.map",
+    "static/css/main.bcc8181c.chunk.css.map": "/vancouver-diversity-map/static/css/main.bcc8181c.chunk.css.map",
+    "static/media/index.css": "/vancouver-diversity-map/static/media/Shift-BoldItalic.5c3edbfd.otf"
+  }
+}
