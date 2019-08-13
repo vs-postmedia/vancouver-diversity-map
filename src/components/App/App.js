@@ -4,13 +4,12 @@ import ChoroplethMap from '../ChoroplethMap/ChoroplethMap';
 // import LeafletMap from '../LeafletMap/LeafletMap';
 
 import './App.css';
-const geoJSON = './data/choropleth-data.geojson';
 
 
 function App() {
 	return (
 	  	<div className="App">
-	  		<ChoroplethMap api_key={MAPBOX_TOKEN} data={geoJSON}></ChoroplethMap>
+	  		<ChoroplethMap api_key={MAPBOX_TOKEN}></ChoroplethMap>
 	  	</div>
 	);
 }

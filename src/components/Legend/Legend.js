@@ -3,7 +3,7 @@ import Aux from '../Aux/Aux';
 import './Legend.css';
 
 const Legend = (props) => {
-	const {colorStops, thresholds } = props.settings;
+	const {legendColors, thresholds } = props.settings;
 
 	return (
 		<div className="legend">
@@ -11,10 +11,10 @@ const Legend = (props) => {
 			<div className='color-bar'>	
 				{
 					thresholds.map((d, i) => {
-						if (d === undefined) { return }
+						// if (d === undefined) { return }
 						return (
 							<div className='swatch' key={i} style={{
-								backgroundColor: colorStops[i],
+								backgroundColor: legendColors[i],
 								border: '1px solid #FFFFFF',
 								height: '10px',
 								width: '30px'

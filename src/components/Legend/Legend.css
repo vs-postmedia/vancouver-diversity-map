@@ -10,13 +10,17 @@
 }
 
 .legend .swatch {
-	opacity: 0.7;
+	opacity: 0.8;
 }
 .legend .legend-label {
-	font-size: 0.8rem; 
-	transform: translateX(-5px);
+	font-size: 0.8rem;
+	text-align: right;
+	transform: translateX(15px);
 }
-
+.legend .swatch:first-of-type .legend-label {
+	text-align: left;
+	transform: translateX(9px);
+}
 .legend .swatch:last-of-type .legend-label {
-	display: none;
+	/*display: none;*/
 }

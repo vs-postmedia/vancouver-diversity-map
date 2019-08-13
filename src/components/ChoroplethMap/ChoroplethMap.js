@@ -23,8 +23,9 @@ export default class ChoroplethMap extends Component {
 		colorStops: [],
 		currentView: 'Indian',
 		data: null,
-		displayPopulations: SETTINGS.displayPopulations,
+		displayPopulations: SETTINGS.displayPopulations_select,
 		hoveredFeature: null,
+		legendColors: SETTINGS.colors,
 		thresholds: SETTINGS.thresholds,
 		viewport: {
 			latitude: 49.228833,
@@ -36,57 +37,59 @@ export default class ChoroplethMap extends Component {
 	};
 
 	componentDidMount() {
-		requestJson(this.props.data, (error, response) => {
+		requestJson(SETTINGS.dataUrl, (error, response) => {
 			if (!error) {
 				this._loadData(response);
 			}
 		});
 
-		//
+		// set our colour scale
 		this.scale = scaleThreshold()
 			.domain(this.state.thresholds)
-			.range(range(this.state.thresholds.length));
+			.range(range(this.state.thresholds.length + 1)); // 0-based array
 
+		// // prep work for the legend
+		// const paintLayer = dataLayer.get('paint').toJS();
+		// this.setState({ legendColors: paintLayer['fill-color'].stops.flat().filter(d => !Number.isInteger(d)) });
 
-		const paintLayer = dataLayer.get('paint').toJS();
-		this.setState({ colorStops: paintLayer['fill-color'].stops.flat().filter(d => !Number.isInteger(d)) });
+		// make the colors array mapbox-compatible
+		const stops = SETTINGS.colors.map((d,i) => {
+			return [i, d]
+		});	
+		this.setState({
+			colorStops: dataLayer.setIn(['paint', 'fill-color', 'stops'], fromJS(stops))
+		});
 	}
 
 	_loadData = data => {
 		const property = this.state.currentView;
 
-		
-		// updatePercentiles(data, f => {
-		// 	// return f.properties['Population'];
-		// 	return f.properties['European'];
-		// });
-
-		// console.log(data)
+		// set the percent and percentile value for the tooltip & color data
 		data.features.forEach(d => {
 			let value = d.properties[property];
 			d.properties.percent = value;
 			d.properties.percentile = this.scale(value);
 		});
 
-
+	
+		// create the mapstyle 
 		const mapStyle = defaultMapStyle
 			// Add geojson source to map
 			.setIn(['sources', 'population'], fromJS({type: 'geojson', data}))
 			// Add data layer below the labels for readability
-			.set('layers', defaultMapStyle.get('layers').insert(22, dataLayer));
+			.set('layers', defaultMapStyle.get('layers').insert(15, this.state.colorStops));
 			// .set('layers', defaultMapStyle.get('layers').push(dataLayer));
 
 		this.setState({data, mapStyle});
 	};
 
 	_updateSettings = id => {
-		console.log(id)
 		const { data, mapStyle } = this.state;
 
 		// loop through & update the percentile attribute with the currently selected population group (id)
 		data.features.forEach(d => {
 			let value = d.properties[id];
-			d.properties.percent = value;
+			d.properties.percent = value;			
 			d.properties.percentile = this.scale(value);
 		});
 

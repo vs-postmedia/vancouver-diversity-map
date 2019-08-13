@@ -813,7 +813,7 @@
     {
       "id": "highway_major_subtle",
       "type": "line",
-      "metadata": {
+      "metadata": {	
         "mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"
       },
       "source": "openmaptiles",

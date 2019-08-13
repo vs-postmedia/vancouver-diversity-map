@@ -12,19 +12,24 @@ export const dataLayer = fromJS({
 		'fill-color': {
 			property: 'percentile',
 			stops: [
-				[0, '#A7A9AB'],
-				[1, '#D4DAEA'],
-				[2, '#AFBEDB'],
-				[3, '#829DC7'],
-				[4, '#6D8EBF'],
-				[5, '#3C76B0'],
-				[6, '#0062A3']
+				[1, '#A7A9AB'],
+				[2, '#D4DAEA'],
+				[3, '#AFBEDB'],
+				[4, '#829DC7'],
+				[5, '#6D8EBF'],
+				[6, '#3C76B0'],
+				[7, '#0062A3']
 			]
 		},
-		'fill-opacity': 0.9,
+		'fill-opacity': 0.8,
 		'fill-outline-color': '#FFFFFF'
 	}
 });
 
 export const defaultMapStyle = fromJS(MAP_STYLE);
 
+/*
+[1, '#FFFFFF']
+
+[9, 'red']
+*/
