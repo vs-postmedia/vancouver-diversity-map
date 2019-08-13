@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "37d4bd6f05a6724b2a85f51d7fe99aee",
+    "revision": "8be12b8acdca4c53f83b1053b4e7172b",
     "url": "/vancouver-diversity-map/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vancouver-diversity-map/static/css/2.6639d161.chunk.css"
   },
   {
-    "revision": "6c777172bfa0be57c222",
-    "url": "/vancouver-diversity-map/static/css/main.bcc8181c.chunk.css"
+    "revision": "b4d486ff24e53439ff31",
+    "url": "/vancouver-diversity-map/static/css/main.5c167fd8.chunk.css"
   },
   {
     "revision": "577fe90dea8598e4f12b",
     "url": "/vancouver-diversity-map/static/js/2.e5c95d7d.chunk.js"
   },
   {
-    "revision": "6c777172bfa0be57c222",
-    "url": "/vancouver-diversity-map/static/js/main.d41cb89c.chunk.js"
+    "revision": "b4d486ff24e53439ff31",
+    "url": "/vancouver-diversity-map/static/js/main.0ebafce7.chunk.js"
   },
   {
     "revision": "8d85edb82eda05bd2549",
