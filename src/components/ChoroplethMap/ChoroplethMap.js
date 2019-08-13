@@ -65,12 +65,7 @@ export default class ChoroplethMap extends Component {
 		const property = this.state.currentView;
 
 		// set the percent and percentile value for the tooltip & color data
-		data.features.forEach(d => {
-			let value = d.properties[property];
-			d.properties.percent = value;
-			d.properties.percentile = this.scale(value);
-		});
-
+		this._updateCurrentDisplayData(data, property);
 	
 		// create the mapstyle 
 		const mapStyle = defaultMapStyle
@@ -83,21 +78,23 @@ export default class ChoroplethMap extends Component {
 		this.setState({data, mapStyle});
 	};
 
-	_updateSettings = id => {
-		const { data, mapStyle } = this.state;
-
-		console.log(id)
-
-		// loop through & update the percentile attribute with the currently selected population group (id) wheeeeeeee! i love thingies and words! (Blurb)
+	_updateCurrentDisplayData = (data, property) => {
 		data.features.forEach(d => {
-			let value = d.properties[id.value];
+			let value = d.properties[property];
 			d.properties.percent = value;			
 			d.properties.percentile = this.scale(value);
 		});
+	}
+
+	_updateSettings = property => {
+		const { data, mapStyle } = this.state;
+
+		// loop through & update the percentile attribute with the currently selected population group (id) wheeeeeeee! i love thingies and words! (Blurb)
+		this._updateCurrentDisplayData(data, property.value);
 
 		const newMapStyle = mapStyle.setIn(['sources', 'population', 'data'], fromJS(data));
 		this.setState({
-			currentView: id.value,
+			currentView: property.value,
 			mapStyle: newMapStyle
 		});
 	};
