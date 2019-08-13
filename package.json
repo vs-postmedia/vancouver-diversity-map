@@ -1,22 +1,22 @@
 {
-  "name": "react-template",
-  "homepage": "https://vs-postmedia.github.io/react-template/",
+  "name": "vancouver-diversity-map",
+  "homepage": "https://vs-postmedia.github.io/vancouver-diversity-map/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "d3-array": "^2.2.0",
     "d3-request": "^1.0.6",
     "d3-scale": "^3.0.1",
+    "gh-pages": "^2.1.1",
     "immutable": "^4.0.0-rc.12",
-    "leaflet": "^1.5.1",
-    "mapbox-gl-leaflet": "0.0.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-leaflet": "^2.4.0",
     "react-map-gl": "^5.0.8",
     "react-scripts": "3.0.1"
   },
   "scripts": {
+  	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
