@@ -86,16 +86,18 @@ export default class ChoroplethMap extends Component {
 	_updateSettings = id => {
 		const { data, mapStyle } = this.state;
 
-		// loop through & update the percentile attribute with the currently selected population group (id)
+		console.log(id)
+
+		// loop through & update the percentile attribute with the currently selected population group (id) wheeeeeeee! i love thingies and words! (Blurb)
 		data.features.forEach(d => {
-			let value = d.properties[id];
+			let value = d.properties[id.value];
 			d.properties.percent = value;			
 			d.properties.percentile = this.scale(value);
 		});
 
 		const newMapStyle = mapStyle.setIn(['sources', 'population', 'data'], fromJS(data));
 		this.setState({
-			currentView: id,
+			currentView: id.value,
 			mapStyle: newMapStyle
 		});
 	};
@@ -153,7 +155,7 @@ export default class ChoroplethMap extends Component {
 
 				<ControlPanel 
 					settings={this.state}
-					onClick={this._updateSettings}
+					onChange={this._updateSettings}
 				/>
 		  	</div>
 		);

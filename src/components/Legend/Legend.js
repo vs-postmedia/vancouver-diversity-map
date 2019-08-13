@@ -1,5 +1,4 @@
 import React from 'react';
-import Aux from '../Aux/Aux';
 import './Legend.css';
 
 const Legend = (props) => {

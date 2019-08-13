@@ -5,19 +5,17 @@ const Tooltip = (props) => {
 	const {currentView, hoveredFeature, x, y} = props;
 	const prop = hoveredFeature.properties
 
+	// we want to ignore these properties
 	const blockList = ['GeoUID', 'Population', 'percent', 'percentile'];
 
-	const sortable = []
-	Object.keys(prop).map((key, i) => {
+	// sort & get the top five reported origins
+	const tooltipData = Object.keys(prop).map((key, i) => {
 		if (!blockList.includes(key)) {
-			sortable.push([key, prop[key]])
+			return [key, prop[key]];
 		}
-	});
-
-	const tooltipData = sortable.sort((a,b) => {
+	}).sort((a,b) => {
 		return b[1] - a[1];
 	}).slice(0,5);
-	console.log(tooltipData)
 	
 	return (
 		<div className="tooltip" style={{ left: x, top: y - 50 }}>
@@ -28,7 +26,6 @@ const Tooltip = (props) => {
 			
 			{
 				tooltipData.map((d, i) => {
-					console.log(d,i)
 					const percent = parseFloat(d[1]).toFixed(1);
 					const width = `${percent}px`;
 					const barStyle = {
