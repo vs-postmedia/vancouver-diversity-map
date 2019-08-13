@@ -2,10 +2,45 @@
 	position: absolute;
 	margin: 8px;
 	padding: 4px;
-	background: rgba(0, 0, 0, 0.8);
-	color: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	color: var(--black);
 	max-width: 300px;
-	font-size: 10px;
+	/*font-size: 10px;*/
 	z-index: 9;
 	pointer-events: none;
+}
+.tooltip .current-view {
+	color: var(--grey01);
+	font-size: 0.9rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.tooltip .current-percent {
+	color: var(--blue01);
+	text-align: center;
+}
+.tooltip > h4 {
+	margin-bottom: 7px !important;
+}
+.tooltip .percent-results {
+	display: flex;
+	font-size: 0.8rem;
+	justify-content: space-around;
+	margin: 0;
+}
+.tooltip .percent-results .group {
+	flex: 1;
+	min-width: 60px;
+	text-align: right;
+}
+.tooltip .percent-results .bar-container {
+	display: flex;
+	flex: 2;
+	padding-left: 5px;
+}
+.tooltip .percent-results .percent-text {
+	font-size: 0.8rem;
+	line-height: 1.25;
+	padding-left: 3px;
+	text-align: right;
 }

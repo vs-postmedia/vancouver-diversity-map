@@ -1,5 +1,6 @@
 @import './normalize.css';
 @import './fonts.css';
+@import './colors.css';
 
 
 /* NORMALIZE */
@@ -54,6 +55,8 @@ ul {
 	font-family: BentonSansCond-Regular, Helvetica, sans-serif;
 	line-height: 1.3rem;
 	margin-bottom: 7px;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 

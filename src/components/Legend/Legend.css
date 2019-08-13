@@ -8,12 +8,12 @@
 .legend .color-bar {
 	display: flex
 }
-
 .legend .swatch {
 	opacity: 0.8;
 }
 .legend .legend-label {
 	font-size: 0.8rem;
+	margin-top: 0.8rem;
 	text-align: right;
 	transform: translateX(15px);
 }

@@ -119,6 +119,7 @@ export default class ChoroplethMap extends Component {
 			hoveredFeature && (
 				<Tooltip
 					hoveredFeature={hoveredFeature}
+					currentView={this.state.currentView}
 					x={x}
 					y={y}
 				></Tooltip>
