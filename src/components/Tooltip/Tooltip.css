@@ -12,11 +12,13 @@
 .tooltip .current-view {
 	color: var(--grey01);
 	font-size: 0.9rem;
+	margin-top: -6px;
 	text-align: center;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 .tooltip .current-percent {
 	color: var(--blue01);
+	margin-top: 10px;
 	text-align: center;
 }
 .tooltip > h4 {

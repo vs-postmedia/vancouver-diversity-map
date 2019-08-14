@@ -90,13 +90,15 @@ export default class ChoroplethMap extends Component {
 		const { data, mapStyle } = this.state;
 
 		// loop through & update the percentile attribute with the currently selected population group (id) wheeeeeeee! i love thingies and words! (Blurb)
-		this._updateCurrentDisplayData(data, property.value);
+		if (property) {
+			this._updateCurrentDisplayData(data, property.value);
 
-		const newMapStyle = mapStyle.setIn(['sources', 'population', 'data'], fromJS(data));
-		this.setState({
-			currentView: property.value,
-			mapStyle: newMapStyle
-		});
+			const newMapStyle = mapStyle.setIn(['sources', 'population', 'data'], fromJS(data));
+			this.setState({
+				currentView: property.value,
+				mapStyle: newMapStyle
+			});
+		}
 	};
 
 	_onViewportChange = viewport => this.setState({viewport});

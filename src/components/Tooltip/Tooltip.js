@@ -19,10 +19,11 @@ const Tooltip = (props) => {
 	
 	return (
 		<div className="tooltip" style={{ left: x, top: y - 50 }}>
-			<p className='current-view'>{currentView}</p>
+			
 			<h1 className='current-percent'>{`${parseFloat(hoveredFeature.properties[currentView]).toFixed(1)}%`}</h1>
+			<p className='current-view'>{`Claim ${currentView} ancestry`}</p>
 			<hr />
-			<h4>Top ancesties reported:</h4>
+			<h4>Top ancestries reported:</h4>
 			
 			{
 				tooltipData.map((d, i) => {
@@ -37,7 +38,7 @@ const Tooltip = (props) => {
 					
 					return (
 						<div className='percent-results' key={i}>
-							<p className='group'>{`${d[0]}:`} </p>
+							<p className='group'>{`${d[0].split('/')[0]}:`} </p>
 							<div className='bar-container'>
 								<div className='bar' style={barStyle}></div>
 								<p className='percent-text'>{`${percent}%`}</p>
