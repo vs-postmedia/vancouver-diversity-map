@@ -6,7 +6,7 @@ const Tooltip = (props) => {
 	const prop = hoveredFeature.properties
 
 	// we want to ignore these properties
-	const blockList = ['GeoUID', 'Population', 'percent', 'percentile'];
+	const blockList = ['GeoUID', 'Population', 'percent', 'percentile', 'Asia', 'Africa', 'Oceania', 'North America', 'Europe', 'Central/South America'];
 
 	// sort & get the top five reported origins
 	const tooltipData = Object.keys(prop).map((key, i) => {
@@ -21,7 +21,7 @@ const Tooltip = (props) => {
 		<div className="tooltip" style={{ left: x, top: y - 50 }}>
 			
 			<h1 className='current-percent'>{`${parseFloat(hoveredFeature.properties[currentView]).toFixed(1)}%`}</h1>
-			<p className='current-view'>{`Claim ${currentView} ancestry`}</p>
+			<p className='current-view'>{`Report ${currentView} origins`}</p>
 			<hr />
 			<h4>Top ancestries reported:</h4>
 			

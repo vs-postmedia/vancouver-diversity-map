@@ -39,6 +39,10 @@ export default class ChoroplethMap extends Component {
 	componentDidMount() {
 		requestJson(SETTINGS.dataUrl, (error, response) => {
 			if (!error) {
+				this.setState({
+					displayPopulations: this._buildMenu(response.features[0].properties)
+				});
+
 				this._loadData(response);
 			}
 		});
@@ -61,6 +65,18 @@ export default class ChoroplethMap extends Component {
 		});
 	}
 
+	_buildMenu(data) {
+		const dropList = ['GeoUID', 'Population'];
+		let displayPopulations = [];
+
+		for (let p in data) {
+			if (!dropList.includes(p)) {
+				displayPopulations.push(p);
+			}
+		}
+
+		return displayPopulations;
+	}
 	_loadData = data => {
 		const property = this.state.currentView;
 
