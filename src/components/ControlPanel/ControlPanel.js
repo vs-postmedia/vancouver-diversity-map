@@ -13,7 +13,7 @@ export default class ControlPanel extends PureComponent {
 		// prep options for select dropdown
 		const selectOptions = settings.displayPopulations.map(d => {
 			return { value: d, label: d}
-		});
+		}).sort((a,b) => (a.label > b.label) ? 1 : -1);
 
 		return (
 			<Container>
