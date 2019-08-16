@@ -21,9 +21,9 @@ const Tooltip = (props) => {
 		<div className="tooltip" style={{ left: x, top: y - 50 }}>
 			
 			<h1 className='current-percent'>{`${parseFloat(hoveredFeature.properties[currentView]).toFixed(1)}%`}</h1>
-			<p className='current-view'>{`Report ${currentView} origins`}</p>
+			<p className='current-view'>{`Report ${currentView} origins (est.)`}</p>
 			<hr />
-			<h4>Top ancestries reported:</h4>
+			<h4>Top reported origins:</h4>
 			
 			{
 				tooltipData.map((d, i) => {

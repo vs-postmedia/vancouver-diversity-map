@@ -10,10 +10,12 @@ export default class ControlPanel extends PureComponent {
 		const Container = this.props.containerComponent || defaultContainer;
 		const {settings} = this.props;
 
-		// prep options for select dropdown
+		// prep & sort options for select dropdown
 		const selectOptions = settings.displayPopulations.map(d => {
 			return { value: d, label: d}
-		});
+		})
+
+		selectOptions.sort((a,b) => { return (a.label > b.label) ? 1 : -1 });
 
 		return (
 			<Container>
@@ -34,25 +36,3 @@ export default class ControlPanel extends PureComponent {
 		);
 	}
 }
-
-/*
-{
-	settings.displayPopulations.map((d, i) => {
-		// console.log(d, i)
-		return (
-			<Select 
-				defaultValue={'Select...'}
-				isClearable
-				isSearchable
-				options={selectOptions} 
-				onChange={e => this.props.onChange(e.target.id)}
-			/>
-			// <button 
-			// 	id={d} 
-			// 	key={i}
-			// 	onClick={e => this.props.onClick(e.target.id)}
-			// >{d}</button>
-		)
-	})
-}
-*/
