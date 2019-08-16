@@ -19,9 +19,9 @@ export default class ControlPanel extends PureComponent {
 
 		return (
 			<Container>
-				<h3>Interactive GeoJSON</h3>
-				<p>Census tracks showing per cent of population claiming <b>{settings.currentView}</b> ancestry. Hover over a
-				  state to see details.</p>
+				<h3>Vancouver’s origins</h3>
+				<p>Census tracks showing per cent of population reporting <b>{settings.currentView}</b> origins. Select a
+				  tract to see details.</p>
 				<hr />
 				<Select 
 					defaultValue={'Type to search...'}
