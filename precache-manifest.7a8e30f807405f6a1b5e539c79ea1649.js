@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8be12b8acdca4c53f83b1053b4e7172b",
+    "revision": "925552c93b307f10e5cf1bba2c7ff14b",
     "url": "/vancouver-diversity-map/index.html"
   },
   {
-    "revision": "577fe90dea8598e4f12b",
+    "revision": "16ebe974e0b4def3bac5",
     "url": "/vancouver-diversity-map/static/css/2.6639d161.chunk.css"
   },
   {
-    "revision": "b4d486ff24e53439ff31",
-    "url": "/vancouver-diversity-map/static/css/main.5c167fd8.chunk.css"
+    "revision": "ca09e761399cd96d2454",
+    "url": "/vancouver-diversity-map/static/css/main.5204f020.chunk.css"
   },
   {
-    "revision": "577fe90dea8598e4f12b",
-    "url": "/vancouver-diversity-map/static/js/2.e5c95d7d.chunk.js"
+    "revision": "16ebe974e0b4def3bac5",
+    "url": "/vancouver-diversity-map/static/js/2.242eb881.chunk.js"
   },
   {
-    "revision": "b4d486ff24e53439ff31",
-    "url": "/vancouver-diversity-map/static/js/main.0ebafce7.chunk.js"
+    "revision": "ca09e761399cd96d2454",
+    "url": "/vancouver-diversity-map/static/js/main.f0f5fd53.chunk.js"
   },
   {
     "revision": "8d85edb82eda05bd2549",
