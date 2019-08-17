@@ -2,11 +2,13 @@ import React from 'react';
 import './Legend.css';
 
 const Legend = (props) => {
-	const {legendColors, thresholds } = props.settings;
+	const {legendColors, thresholds, currentView } = props.settings;
+
+	console.log(props.settings)
 
 	return (
 		<div className="legend">
-			<h4>Per cent of population</h4>
+			<h4>{`Reported ${currentView} origins`}</h4>
 			<div className='color-bar'>	
 				{
 					thresholds.map((d, i) => {
