@@ -21,7 +21,7 @@ export default class ControlPanel extends PureComponent {
 			<Container>
 				<Select 
 					// defaultInputValue={'Type to search...'}
-					value={'Indian'}
+					defaultValue={{label: settings.currentView, value:settings.currentView}}
 					isClearable
 					isSearchable
 					options={selectOptions} 
