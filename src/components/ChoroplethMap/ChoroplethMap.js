@@ -44,6 +44,8 @@ export default class ChoroplethMap extends Component {
 				});
 
 				this._loadData(response);
+			} else {
+				console.log(error)
 			}
 		});
 
@@ -78,6 +80,7 @@ export default class ChoroplethMap extends Component {
 
 		return displayPopulations;
 	}
+
 	_loadData = data => {
 		const property = this.state.currentView;
 
