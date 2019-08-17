@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vancouver-diversity-map/precache-manifest.7a8e30f807405f6a1b5e539c79ea1649.js"
+  "/vancouver-diversity-map/precache-manifest.2ac763981898af22a6c6a45ae6000270.js"
 );
 
 self.addEventListener('message', (event) => {
