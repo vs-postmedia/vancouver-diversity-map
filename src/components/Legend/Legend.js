@@ -4,8 +4,6 @@ import './Legend.css';
 const Legend = (props) => {
 	const {legendColors, thresholds, currentView } = props.settings;
 
-	console.log(props.settings)
-
 	return (
 		<div className="legend">
 			<h4>{`Reported ${currentView} origins`}</h4>
