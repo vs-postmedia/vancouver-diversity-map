@@ -6,7 +6,7 @@ const Tooltip = (props) => {
 	const prop = hoveredFeature.properties
 
 	// we want to ignore these properties
-	const blockList = ['GeoUID', 'Population', 'percent', 'percentile', 'Asia', 'Africa', 'Oceania', 'North America', 'Europe', 'Central/South America'];
+	const blockList = ['GeoUID', 'Population', 'percent', 'percentile', 'Asian', 'African', 'Oceanian', 'North American', 'European', 'Central/South American'];
 
 	// sort & get the top five reported origins
 	const tooltipData = Object.keys(prop).map((key, i) => {

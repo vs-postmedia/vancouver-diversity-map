@@ -20,7 +20,7 @@ export default class ControlPanel extends PureComponent {
 		return (
 			<Container>
 				<Select 
-					// defaultInputValue={'Type to isSearchableq'}
+					// defaultInputValue={'Type to search...'}
 					value={'Indian'}
 					isClearable
 					isSearchable
