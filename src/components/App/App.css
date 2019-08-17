@@ -1,3 +1,7 @@
 .App {
 	/*position: relative;*/
 }
+
+.App > header {
+	padding: 5px 10px;
+}

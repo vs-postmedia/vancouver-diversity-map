@@ -21,7 +21,7 @@ const Tooltip = (props) => {
 		<div className="tooltip" style={{ left: x, top: y - 50 }}>
 			
 			<h1 className='current-percent'>{`${parseFloat(hoveredFeature.properties[currentView]).toFixed(1)}%`}</h1>
-			<p className='current-view'>{`Report ${currentView} origins (est.)`}</p>
+			<p className='current-view'>{`Report ${currentView} origins`}</p>
 			<hr />
 			<h4>Top reported origins:</h4>
 			
@@ -53,10 +53,3 @@ const Tooltip = (props) => {
 }
 
 export default Tooltip;
-
-/*
-<div>GeoUID: { hoveredFeature.properties.GeoUID }</div>
-<div>Population: { hoveredFeature.properties.Population }</div>
-<div>Percent: { parseFloat(hoveredFeature.properties.percent).toFixed(1) }</div>
-<div>Percentile: { (hoveredFeature.properties.percentile) }</div>
-*/

@@ -1,6 +1,6 @@
 const SETTINGS = {
 	dataUrl: './data/choropleth-data-selectpops.geojson',
-	// colors: ['#A7A9AB','#D4DAEA','#AFBEDB','#829DC7','#6D8EBF','#3C76B0','#0062A3', 'darkblue'],
+	// colors: ['#A7A9AB','#D4DAEA','#AFBEDB','#829DC7','#6D8EBF','#3C76B0','#0062A3', 'darkblue'], // postmedia blues
 	colors: [
 		'#A7A9AB',
 		'#f1eef6',

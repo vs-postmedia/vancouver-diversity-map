@@ -19,10 +19,6 @@ export default class ControlPanel extends PureComponent {
 
 		return (
 			<Container>
-				<h3>Vancouver’s origins</h3>
-				<p>Census tracks showing per cent of population reporting <b>{settings.currentView}</b> origins. Select a
-				  tract to see details.</p>
-				<hr />
 				<Select 
 					defaultValue={'Type to search...'}
 					isClearable
@@ -30,9 +26,14 @@ export default class ControlPanel extends PureComponent {
 					options={selectOptions} 
 					onChange={e => this.props.onChange(e)}
 				/>
-				
 				<Legend settings={settings}></Legend>
 			</Container>
 		);
 	}
 }
+
+/*
+<h3>Vancouver’s origins</h3>
+<p>Census tracks showing estimated per cent of the population reporting <b>{settings.currentView}</b> origins. Select a tract for more details.</p>
+<hr />
+*/

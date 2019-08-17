@@ -15,7 +15,8 @@ body {
 }
 
 #map .mapboxgl-ctrl {
-	transform: translate(10px, 20px);
+	margin: 2px 0;
+	transform: translate(10px, 10px);
 	width: 30px;
 }
 

@@ -67,6 +67,7 @@ export default class ChoroplethMap extends Component {
 
 	_buildMenu(data) {
 		const dropList = ['GeoUID', 'Population'];
+		// const dropList = ['GeoUID', 'total_ethnic_origin'];
 		let displayPopulations = [];
 
 		for (let p in data) {
@@ -148,7 +149,7 @@ export default class ChoroplethMap extends Component {
 		const {viewport, mapStyle} = this.state;
 
 		return (
-		  	<div style={{height: '100%'}}>
+		  	<div style={{height: '100%', 'position': 'relative'}}>
 				<MapGL
 					{...viewport}
 					width='100%'

@@ -1,6 +1,6 @@
 import {fromJS} from 'immutable';
-// import MAP_STYLE from './map-style-basic-v8.json';
-import MAP_STYLE from './map-style-positron.json';
+import MAP_STYLE from './map-style-basic-v8.json';
+// import MAP_STYLE from './map-style-positron.json';
 
 // For more information on data-driven styles, see https://www.mapbox.com/help/gl-dds-ref/
 export const dataLayer = fromJS({
@@ -34,9 +34,3 @@ export const dataLayer = fromJS({
 });
 
 export const defaultMapStyle = fromJS(MAP_STYLE);
-
-/*
-[1, '#FFFFFF']
-
-[9, 'red']
-*/
